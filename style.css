@@ -4,16 +4,14 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    margin: 0 auto;
 }
 
 .grid-button {
-    display: flex;
     margin-bottom: 50px;
 }
 .cell {
     border: 1px solid black;
-    box-sizing: border-box;
+    box-sizing: border-box; /* border does not contribute to cell size */
 }
 
 .grid {
@@ -22,8 +20,4 @@ body {
     align-items: center;
     width: 960px;
     height: 960px;
-}
-
-.hov-square {
-    background-color: blue;
 }
