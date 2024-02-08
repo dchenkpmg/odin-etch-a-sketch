@@ -1,7 +1,21 @@
 const grid = document.querySelector('.grid');
+let gridWidth = grid.offsetWidth;
+let gridHeight = grid.offsetHeight;
 
-// let number = prompt('Enter the number of boxes to be generated on a side of the grid', 16);
-// number = parseInt(number);
+let cellWidth = gridWidth / 16;
+let cellHeight = gridHeight / 16;
+
+for (let i = 0; i < 16; i++) {
+    let row = document.createElement('div');
+    grid.appendChild(row);
+    for (let j = 0; j < 16; j++) {
+       const cell = document.createElement('div');
+       cell.classList.add('cell');
+       cell.style.width = `${cellWidth}px`;
+       cell.style.height = `${cellHeight}px`;
+       row.appendChild(cell);
+    }
+}
 
 let button = document.querySelector('button');
 button.addEventListener('click', () => {
@@ -15,11 +29,11 @@ button.addEventListener('click', () => {
         }
     }
     grid.innerHTML = "";
-    let gridWidth = grid.offsetWidth;
-    let gridHeight = grid.offsetHeight;
+    gridWidth = grid.offsetWidth;
+    gridHeight = grid.offsetHeight;
     
-    let cellWidth = gridWidth / number;
-    let cellHeight = gridHeight / number;
+    cellWidth = gridWidth / number;
+    cellHeight = gridHeight / number;
     
     for (let i = 0; i < number; i++) {
         let row = document.createElement('div');
