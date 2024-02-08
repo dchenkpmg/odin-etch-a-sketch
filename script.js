@@ -28,7 +28,8 @@ gridCells.forEach(cell => {
     });
     cell.addEventListener('mouseover', () => {
         if (isDown) { 
-            cell.style.backgroundColor = 'blue';
+            let randomColor = Math.floor(Math.random()*16777215).toString(16);
+            cell.style.backgroundColor = '#' + randomColor;
         }
     });
     cell.addEventListener('mouseup', () => {
@@ -81,7 +82,8 @@ button.addEventListener('click', () => {
                 });
                 cell.addEventListener('mouseover', () => {
                     if (isDown) { 
-                        cell.style.backgroundColor = 'blue';
+                        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+                        cell.style.backgroundColor = '#' + randomColor;
                     }
                 });
                 cell.addEventListener('mouseup', () => {
